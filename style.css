@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #111;
+    color: white;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    text-align: center;
+    padding: 20px 15px;
+    background: #181818;
+    border-bottom: 1px solid #333;
+}
+
+header h1 {
+    font-size: 26px;
+    margin-bottom: 5px;
+}
+
+header p {
+    color: #aaa;
+    font-size: 14px;
+}
+
+main {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+}
+
+.controles {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.som {
+    min-height: 140px;
+
+    border: none;
+    border-radius: 18px;
+
+    background: #222;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 10px;
+
+    cursor: pointer;
+
+    border: 2px solid #333;
+
+    transition: 0.15s;
+}
+
+.som:active {
+    transform: scale(0.96);
+}
+
+.som.tocando {
+    background: #333;
+    border-color: #00ff88;
+}
+
+.icone {
+    font-size: 42px;
+}
+
+.nome {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#pararTudo {
+    width: 100%;
+
+    margin-top: 20px;
+    padding: 20px;
+
+    border: none;
+    border-radius: 15px;
+
+    background: #c62828;
+    color: white;
+
+    font-size: 20px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+#pararTudo:active {
+    transform: scale(0.97);
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    color: #666;
+    font-size: 12px;
+}
+
+/* Celulares muito pequenos */
+
+@media (max-width: 400px) {
+
+    main {
+        padding: 12px;
+    }
+
+    .controles {
+        gap: 10px;
+    }
+
+    .som {
+        min-height: 125px;
+    }
+
+    .icone {
+        font-size: 35px;
+    }
+
+    .nome {
+        font-size: 16px;
+    }
+}
